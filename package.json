@@ -1,0 +1,26 @@
+{
+  "name": "bookly",
+  "version": "1.0.0",
+  "description": "Bookly is a learning project that simulates an online book platform. It allows users to explore, search, and discover books across various genres. The project demonstrates the fundamentals of modern web development — including responsive design, user-friendly interfaces, and dynamic data handling.",
+  "main": "app.js",
+  "scripts": {
+    "start": "live-server",
+    "build": "rollup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kr4sn0v/bookly.git"
+  },
+  "author": "Igor Krasnov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kr4sn0v/bookly/issues"
+  },
+  "homepage": "https://github.com/kr4sn0v/bookly#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "eslint": "^9.38.0",
+    "globals": "^16.4.0",
+    "rollup": "^4.52.5"
+  }
+}
