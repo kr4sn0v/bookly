@@ -19,6 +19,34 @@
         }
     }
 
+    class DivComponent {
+        constructor() {
+            this.el = document.createElement('div');
+        }
+
+        render() {
+            this.el;
+        }
+    }
+
+    class Header extends DivComponent {
+        constructor(appState) {
+            super();
+            this.appState = appState;
+        }
+
+        render() {
+            this.el.innerHTML = '';
+            this.el.classList.add('header');
+            this.el.innerHTML = `
+            <div>
+                <img src="/static/logo.svg" alt="Logo" />   
+            </div>
+        `;
+            return this.el;
+        }
+    }
+
     const PATH_SEPARATOR = '.';
     const TARGET = Symbol('target');
     const UNSUBSCRIBE = Symbol('unsubscribe');
@@ -1360,8 +1388,12 @@
             const main = document.createElement('div');
             main.innerHTML = `Number of books: ${this.appState.favorites.length}`;
             this.app.innerHTML = '';
-            this.app.append(main);
-            this.appState.favorites.push('d');
+            this.renderHeader();
+        }
+
+        renderHeader() {
+            const header = new Header(this.appState).render();
+            this.app.prepend(header);
         }
     }
 
