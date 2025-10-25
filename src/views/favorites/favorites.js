@@ -1,6 +1,6 @@
-import { AbstractView } from '../../../common/view.js';
-import { Header } from '../../../components/header/header.js';
-import { CardList } from '../../../components/card-list/card-list.js';
+import { AbstractView } from '../../common/view.js';
+import { Header } from '../../components/header/header.js';
+import { CardList } from '../../components/card-list/card-list.js';
 import onChange from 'on-change';
 
 export class FavoritesView extends AbstractView {
